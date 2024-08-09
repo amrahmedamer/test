@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Crud</title>
+    <link href="styleCurd.css" rel="stylesheet">
+   
+</head>
+<body>
+    <div class="crud">
+
+        <div class="Head">
+            <h1>Crud</h1>
+            <p>product managment system</p>
+        </div>
+
+        <div class="Inputs">
+            <input type="text" id="title" placeholder="title">
+            <div class="price">
+                <input type="number"id="Pricee"placeholder="price"onkeyup="getTotal()">
+                <input type="number"id="taxes"placeholder="taxes"onkeyup="getTotal()">
+                <input type="number"id="ads"placeholder="ads"onkeyup="getTotal()">
+                <input type="number"id="discount"placeholder="discount"onkeyup="getTotal()">
+                <small id="total" onkeyup="getTotal()"></small>
+            </div>
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category">
+            <button id="submit">Create</button>
+        </div>
+
+        <div class="Outputs">
+            <div class="searchBlock">
+                <div class="btnSearch">
+                    <button onclick="getSearchMood(this.id)" id="SearchTitle">Search By Title</button>
+                    <button onclick="getSearchMood(this.id)" id="SearchCategory">Search By Category</button>
+                </div>
+                <input type="text" placeholder="Search"id="Search"onkeyup=' searchData(this.value)'>
+            </div>
+            <div id="deleteAll"></div>
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>Titel</th>
+                    <th>Price</th>
+                    <th>Taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>Total</th>
+                    <th>category</th>
+                    <th>Update</th>
+                    <th>delete</th>
+                    
+                </tr>
+
+                <tbody id="table"> </tbody>
+            
+            </table>
+        </div>
+
+    </div>
+
+<script src="jsCurd.js"></script>
+</body>
+
+</html> 
